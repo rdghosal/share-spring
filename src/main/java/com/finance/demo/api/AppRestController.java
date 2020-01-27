@@ -1,18 +1,26 @@
 package com.finance.demo.api;
 
-import org.springframework.http.ResponseEntity;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonRawValue;
+
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class AppRestController {
 
+    @Value("${api.key}")
+    private String test;
+
     @GetMapping("/api")
+    @JsonRawValue
+    @JsonProperty(value="jsondata")
     public ResponseEntity<Json> test() {
 
-        String test = System.getenv("DOCKER_HOST");
         System.out.println(test);
 
         final HttpHeaders httpHeaders = new HttpHeaders();
