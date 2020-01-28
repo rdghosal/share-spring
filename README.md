@@ -17,3 +17,5 @@ The following technology is used to develop this application:
 1. Code routes
 2. Add security configuration for login
 3. Code views
+4. Dockerize app
+5. Host on Heroku or AWS (TBD)
