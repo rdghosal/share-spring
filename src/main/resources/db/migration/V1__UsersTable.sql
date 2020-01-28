@@ -1,0 +1,4 @@
+CREATE TABLE users (
+    id UNIQUEIDENTIFIER NOT NULL PRIMARY KEY,
+    username VARCHAR(225),
+);

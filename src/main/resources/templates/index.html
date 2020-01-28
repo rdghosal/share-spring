@@ -1,12 +1,33 @@
 <!DOCTYPE html>
-<!-- <html xmlns:th="http://www.thymeleaf.org"> -->
-<head lang="en">
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
 <body>
-    <h1>Hello, World!</h1>
+    <table class="table">
+        <thead class="thead-light">
+            <tr>
+                <th scope="col">Symbol</th>
+                <th scope="col">Shares</th>
+                <th scope="col">Share Price (USD)</th>
+                <th scope="col">Total Price (USD)</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for symbol, shares, price, totalPrice in currentPrices %}
+                <tr>
+                    <td>{{ symbol }}</td> 
+                    <td>{{ shares }}</td>
+                    <td>{{ price }}</td>
+                    <td>{{ totalPrice }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <h5>Current balance: {{ balance }}</h5>
+    <h5>Grand total: {{ grandTotal }}</h5>
 </body>
 </html>
