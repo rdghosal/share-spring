@@ -7,7 +7,7 @@ Last Updated: 27 Jan 2020
 # 1. Usage
 ShareSpring is a Spring Boot web application that allows users to purchase/sell stock shares and view their history therein.
 
-# 2. Technology
+# 2. Technologies
 The following technology is used to develop this application:
 1. Spring Boot
 2. A **dockerized** MSSQL Server
